@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/examen.css">
+  <title>Examen de Econometría</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  </style>
+</head>
+<body>
+<section class="contenedor">
+  <div class="texto">
+  <h1>Examen de Econometría</h1>
+  </div>
+  <form method="post" action="/examen">
+
+    <div class="pregunta">
+      <h3>Pregunta 1: Evaluación de estacionariedad de una serie</h3>
+      <p>La serie temporal <strong>ventas</strong> representa las ventas anuales de una empresa de cosméticos (1949–1999).</p>
+      <p>Se ha estimado el siguiente modelo con tendencia determinista:</p>
+      <p>\[ \text{ventas}_t = c + \beta t + \varepsilon_t \]</p>
+
+      <p>Se aplicó también el test de raíces unitarias ADF y se obtuvo:</p>
+      <pre>
+ADF test statistic: -0.906450
+p-value: 0.7780
+Valores críticos:
+  1%: -3.571
+  5%: -2.922
+ 10%: -2.599
+      </pre>
+
+      <p>
+        ¿Se puede considerar que la serie <em>ventas</em> es estacionaria? Justifica tu respuesta basándote en el resultado del test y en el modelo estimado.
+      </p>
+      <textarea name="respuesta_ventas" rows="5" placeholder="Escribe tu respuesta aquí..."></textarea>
+    </div>
+
+    <div class="pregunta">
+      <h3>Pregunta 2: Diferenciación y análisis del índice de empleo</h3>
+      <p>Se trabaja con la serie trimestral <strong>empleo</strong> de un país, y se estudia su primera diferencia:</p>
+
+      <p>\[ Z_t = (1 - B) \cdot \text{empleo}_t \]</p>
+
+      <p>El test ADF aplicado a la serie diferenciada arrojó:</p>
+      <pre>
+ADF test statistic: -6.751657
+p-value: 0.0000
+      </pre>
+
+      <p>
+        ¿Es estacionaria la serie <code>empleo</code> en niveles? ¿Y su primera diferencia? Justifica tu respuesta con base en el valor del estadístico ADF.
+      </p>
+      <textarea name="respuesta_empleo" rows="5" placeholder="Escribe tu respuesta aquí..."></textarea>
+    </div>
+
+    <div class="pregunta">
+      <h3>Pregunta 3: Análisis gráfico y transformación logarítmica</h3>
+      <p>Se trabaja con el índice de empleo de un país. En la Figura 1a se observa la serie <strong>empleo</strong> en niveles, y en la Figura 1b, su transformación logarítmica <code>LEMPLEO</code>.</p>
+      <img src="/static/img/empleo_vs_logempleo.png" alt="Serie empleo y log empleo">
+      <p>
+        a) ¿Qué se puede concluir sobre la varianza de la serie original en comparación con su versión logarítmica?<br>
+        b) ¿Por qué se decide continuar el análisis con la serie original en vez de la logarítmica?<br>
+        Justifica tus respuestas basándote en los gráficos presentados.
+      </p>
+      <textarea name="respuesta_varianza" rows="5" placeholder="Escribe tu respuesta aquí..."></textarea>
+    </div>
+    
+    <div class="pregunta">
+      <h3>Pregunta 4: Correlograma y estacionariedad</h3>
+      <p>El correlograma de la serie <strong>empleo</strong> muestra un lento decrecimiento de la función de autocorrelación (FAC), como se muestra a continuación:</p>
+      <img src="/static/img/correlograma_empleo.png" alt="Correlograma de la serie empleo">
+      <p>¿Qué conclusión es correcta con respecto a la estacionariedad de la serie?</p>
+    
+      <label><input type="radio" name="pregunta4" value="a"> La serie <em>empleo</em> es claramente estacionaria en media.</label><br>
+      <label><input type="radio" name="pregunta4" value="b"> La serie <em>empleo</em> es no estacionaria, lo cual se evidencia por el lento decrecimiento de la FAC.</label><br>
+      <label><input type="radio" name="pregunta4" value="c"> El correlograma no ofrece información sobre la estacionariedad.</label><br>
+      <label><input type="radio" name="pregunta4" value="d"> El uso del logaritmo garantiza que la serie se vuelva estacionaria.</label>
+    </div>
+    
+
+    <button type="submit">Enviar respuestas</button>
+  </form>
+</section>
+</body>
+</html>

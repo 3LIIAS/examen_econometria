@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gracias por completar el examen</title>
+    <link rel="stylesheet" href="/static/gracias.css">
+</head>
+<body>
+    <div class="container">
+        <h1>¡Gracias, {{ nombre }}!</h1>
+
+        <div class="mensaje">
+            <p><strong>Evaluación automática:</strong> {{ mensaje }}</p>
+        </div>
+
+        <div class="progreso">
+            <p><strong>Progreso de respuestas completas:</strong></p>
+            <div class="barra">
+                <div class="relleno">{{ porcentaje }}%</div>
+            </div>
+        </div>
+
+        <h2>Tus respuestas</h2>
+        <ol>
+            <li><strong>Pregunta 1:</strong> {{ request.form.get('respuesta_ventas') }}</li>
+            <li><strong>Pregunta 2:</strong> {{ request.form.get('respuesta_empleo') }}</li>
+        </ol>
+
+        <div>
+            <a href="{{ url_for('index') }}">
+                <button type="button">Volver al Inicio</button>
+            </a>
+        </div>
+
+        <div class="footer">
+            Esta autoevaluación es orientativa. La corrección oficial será realizada por el profesor.
+        </div>
+    </div>
+
+    <script>
+      const relleno = document.querySelector('.relleno');
+      if (relleno) {
+        relleno.style.width = relleno.textContent;
+      }
+    </script>
+</body>
+</html>
