@@ -22,8 +22,13 @@
 
         <h2>Tus respuestas</h2>
         <ol>
-            <li><strong>Pregunta 1:</strong> {{ request.form.get('respuesta_ventas') }}</li>
-            <li><strong>Pregunta 2:</strong> {{ request.form.get('respuesta_empleo') }}</li>
+            <li><strong>Pregunta 1 (Ventas):</strong> {{ request.form.get('respuesta_ventas') }}</li>
+            <li><strong>Pregunta 2 (Empleo):</strong> {{ request.form.get('respuesta_empleo') }}</li>
+            <li><strong>Pregunta 3 (Varianza):</strong> {{ request.form.get('respuesta_varianza') }}</li>
+            <li><strong>Pregunta 4:</strong> {{ request.form.get('pregunta4') }}</li>
+            <li><strong>Pregunta 5 (MCO):</strong> {{ request.form.get('respuesta_mco') }}</li>
+            <li><strong>Pregunta 6 (Hipótesis):</strong> {{ request.form.get('respuesta_hipotesis') }}</li>
+            <li><strong>Pregunta 7 (Autocorrelación):</strong> {{ request.form.get('respuesta_autocorrelacion') }}</li>
         </ol>
 
         <div>
@@ -38,10 +43,10 @@
     </div>
 
     <script>
-      const relleno = document.querySelector('.relleno');
-      if (relleno) {
-        relleno.style.width = relleno.textContent;
-      }
+        const relleno = document.querySelector('.relleno');
+        if (relleno) {
+            relleno.style.width = relleno.textContent;
+        }
     </script>
 </body>
 </html>

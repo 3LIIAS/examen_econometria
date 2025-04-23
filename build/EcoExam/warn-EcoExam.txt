@@ -14,7 +14,7 @@ Types if import:
 IMPORTANT: Do NOT post this list to the issue-tracker. Use it as a basis for
             tracking down the missing module yourself. Thanks!
 
-missing module named pyimod02_importers - imported by C:\Users\YELII\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\PyInstaller\hooks\rthooks\pyi_rth_pkgutil.py (delayed)
+missing module named pyimod02_importers - imported by C:\Users\YELII\Desktop\examen_econometria\venv\Lib\site-packages\PyInstaller\hooks\rthooks\pyi_rth_pkgutil.py (delayed)
 missing module named 'org.python' - imported by copy (optional), xml.sax (delayed, conditional)
 missing module named org - imported by pickle (optional)
 missing module named pwd - imported by posixpath (delayed, conditional, optional), shutil (delayed, optional), tarfile (optional), pathlib (delayed, optional), subprocess (delayed, conditional, optional), webbrowser (delayed), http.server (delayed, optional), netrc (delayed, conditional), getpass (delayed)
@@ -36,6 +36,7 @@ missing module named multiprocessing.TimeoutError - imported by multiprocessing 
 missing module named multiprocessing.set_start_method - imported by multiprocessing (top-level), multiprocessing.spawn (top-level)
 missing module named multiprocessing.get_start_method - imported by multiprocessing (top-level), multiprocessing.spawn (top-level)
 missing module named multiprocessing.Value - imported by multiprocessing (top-level), werkzeug.debug (top-level)
+missing module named typing_extensions - imported by markupsafe (conditional), werkzeug.test (conditional), werkzeug.datastructures.mixins (conditional), werkzeug.datastructures.structures (conditional), werkzeug.datastructures.auth (conditional), werkzeug.datastructures.headers (conditional), werkzeug.datastructures.range (conditional), click.globals (conditional), click.utils (conditional), click.types (conditional), click.parser (conditional), click.core (conditional), click.decorators (conditional), jinja2.bccache (conditional), jinja2.utils (conditional), jinja2.async_utils (conditional), jinja2.runtime (conditional), jinja2.lexer (conditional), jinja2.nodes (conditional), jinja2.visitor (conditional), jinja2.idtracking (conditional), jinja2.compiler (conditional), jinja2.filters (conditional), jinja2.defaults (conditional), jinja2.parser (conditional), jinja2.environment (conditional), jinja2.ext (conditional), flask.config (conditional), itsdangerous.serializer (conditional), flask.sessions (conditional)
 missing module named importlib_metadata - imported by click.decorators (delayed, conditional, optional), flask.cli (delayed, conditional)
 missing module named vms_lib - imported by platform (delayed, optional)
 missing module named java - imported by platform (delayed)

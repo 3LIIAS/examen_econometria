@@ -14,6 +14,18 @@
 <section class="contenedor">
   <div class="texto">
   <h1>Examen de Econometría</h1>
+
+  <div class="pregunta">
+    <label for="nombre"><strong>Nombre del alumno:</strong></label><br>
+    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre aquí" required>
+  </div>
+  
+  <div class="pregunta">
+    <p><strong>Hora de inicio:</strong> {{ hora_inicio }}</p>
+    <input type="hidden" name="hora_inicio" value="{{ hora_inicio }}">
+  </div>
+  
+
   </div>
   <form method="post" action="/examen">
 
@@ -80,6 +92,39 @@ p-value: 0.0000
       <label><input type="radio" name="pregunta4" value="c"> El correlograma no ofrece información sobre la estacionariedad.</label><br>
       <label><input type="radio" name="pregunta4" value="d"> El uso del logaritmo garantiza que la serie se vuelva estacionaria.</label>
     </div>
+
+    <div class="pregunta">
+      <h3>Pregunta 5: Estimación por MCO</h3>
+      <p>Se tiene el modelo clásico de regresión lineal:</p>
+      <p>\[ y = X\beta + \varepsilon \]</p>
+      <p>Donde:</p>
+      <ul>
+        <li>\( y \) es un vector de dimensión \( n \times 1 \)</li>
+        <li>\( X \) es la matriz de regresores de dimensión \( n \times k \)</li>
+        <li>\( \beta \) es un vector de parámetros \( k \times 1 \)</li>
+        <li>\( \varepsilon \sim N(0, \sigma^2 I) \)</li>
+      </ul>
+      <p>Plantea cómo se obtiene el estimador \( \hat{\beta} \) por MCO y explica su interpretación.</p>
+      <textarea name="respuesta_mco" rows="5" placeholder="Escribe tu respuesta aquí..."></textarea>
+    </div>
+
+    <div class="pregunta">
+      <h3>Pregunta 6: Contraste de hipótesis</h3>
+      <p>Para el modelo estimado, se quiere contrastar la hipótesis:</p>
+      <p>\[ H_0: \beta_2 = 0 \quad \text{vs.} \quad H_1: \beta_2 \neq 0 \]</p>
+      <p>Si el valor estimado fue \( \hat{\beta}_2 = 1.8 \) con un error estándar de 0.4, realiza el test estadístico, indica la decisión y justifica tu conclusión al 5% de significación.</p>
+      <textarea name="respuesta_hipotesis" rows="5" placeholder="Escribe tu respuesta aquí..."></textarea>
+    </div>
+
+    
+    <div class="pregunta">
+      <h3>Pregunta 7: Autocorrelación</h3>
+      <p>Se sospecha que los errores del modelo presentan autocorrelación. Se estima el siguiente modelo:</p>
+      <p>\[ \varepsilon_t = \rho \varepsilon_{t-1} + u_t \]</p>
+      <p>Describe cómo se detecta la presencia de autocorrelación de primer orden y qué implicaciones tiene en los estimadores MCO si se confirma.</p>
+      <textarea name="respuesta_autocorrelacion" rows="5" placeholder="Escribe tu respuesta aquí..."></textarea>
+    </div>
+    
     
 
     <button type="submit">Enviar respuestas</button>
