@@ -16,7 +16,7 @@ def examen():
         hora_inicio = request.form.get('hora_inicio', '')
         fecha_envio = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
-        # Captura de respuestas
+        # A partir de aqui guardamos todas las respuestas del examen en variables
         respuesta_ventas = request.form.get('respuesta_ventas', '')
         respuesta_empleo = request.form.get('respuesta_empleo', '')
         respuesta_varianza = request.form.get('respuesta_varianza', '')
